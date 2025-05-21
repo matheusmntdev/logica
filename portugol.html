@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Completo sobre Portugol</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333333;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 60px 20px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #000000;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      font-weight: 400;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      font-weight: 400;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #000000;
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    strong {
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-left: 4px solid #cccccc;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+      color: #333333;
+      margin-bottom: 30px;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      color: #333333;
+    }
+
+    ul,
+    ol {
+      margin-bottom: 30px;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 1em;
+      font-weight: 300;
+      lawful: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <h1>Guia Completo sobre Portugol</h1>
+    <p>Portugol é uma pseudolinguagem didática usada para ensinar lógica de programação, com comandos em português que facilitam o aprendizado antes de migrar para linguagens como C, Java ou Python. Este guia aborda sua estrutura, sintaxe, tipos de dados, comandos, estruturas de controle e exemplos práticos, com base em ferramentas como VisuAlg e Portugol Studio.</p>
+
+    <h2>1. Introdução ao Portugol</h2>
+    <p>Portugol não é uma linguagem de programação compilada, mas um pseudocódigo voltado para o ensino. Ele permite que iniciantes compreendam conceitos de programação sem se preocupar com a complexidade de sintaxes de linguagens reais. É amplamente usado em ferramentas como:</p>
+    <ul>
+      <li><strong>VisuAlg</strong>: Um interpretador gráfico simples e popular.</li>
+      <li><strong>Portugol Studio</strong>: Ambiente moderno com destaque de sintaxe e depuração.</li>
+      <li><strong>Ambientes acadêmicos</strong>: Usado para planejar algoritmos em pseudocódigo.</li>
+    </ul>
+    <p>A sintaxe pode variar entre ferramentas, mas os conceitos fundamentais permanecem consistentes.</p>
+
+    <h2>2. Estrutura Básica de um Programa</h2>
+    <p>Um programa em Portugol segue uma estrutura padrão, com a definição do programa e uma função principal chamada <code>inicio()</code>.</p>
+    <h3>Sintaxe Básica</h3>
+    <pre><code>programa {
+    // Declaração de variáveis
+    // Funções (se houver)
+    funcao inicio() {
+        // Código principal
+    }
+}
+</code></pre>
+    <ul>
+      <li><strong><code>programa</code></strong>: Define o início do programa.</li>
+      <li><strong><code>funcao inicio()</code></strong>: Ponto de entrada onde o código principal é executado.</li>
+      <li><strong><code>//</code></strong>: Comentários de uma linha.</li>
+      <li><strong><code>/* */</code></strong>: Comentários de múltiplas linhas.</li>
+    </ul>
+
+    <h2>3. Tipos de Dados</h2>
+    <p>Portugol suporta tipos de dados básicos para armazenar diferentes tipos de valores.</p>
+    <ul>
+      <li><strong><code>inteiro</code></strong>: Números inteiros (ex.: 5, -10).</li>
+      <li><strong><code>real</code></strong>: Números com ponto flutuante (ex.: 3.14, -0.5).</li>
+      <li><strong><code>caractere</code></strong>: Cadeias de texto ou caracteres (ex.: "Olá", 'A').</li>
+      <li><strong><code>logico</code></strong>: Valores booleanos (<code>verdadeiro</code> ou <code>falso</code>).</li>
+      <li><strong><code>vetor</code> ou <code>matriz</code></strong>: Estruturas para armazenar múltiplos valores.</li>
+    </ul>
+    <h3>Exemplo de Declaração</h3>
+    <pre><code>inteiro idade
+real salario
+caractere nome[50]
+logico ativo
+inteiro notas[5] // Vetor de 5 posições
+</code></pre>
+
+    <h2>4. Entrada e Saída de Dados</h2>
+    <p>Portugol oferece comandos simples para interagir com o usuário.</p>
+    <h3>Saída: Comando <code>escreva</code></h3>
+    <p>Exibe informações na tela.</p>
+    <pre><code>escreva("Olá, mundo!") // Exibe texto
+escreva(idade)         // Exibe o valor de uma variável
+</code></pre>
+    <h3>Entrada: Comando <code>leia</code></h3>
+    <p>Lê dados fornecidos pelo usuário.</p>
+    <pre><code>leia(idade) // Lê um valor inteiro
+leia(nome)  // Lê uma string
+</code></pre>
+    <h3>Exemplo Completo</h3>
+    <pre><code>programa {
+    funcao inicio() {
+        inteiro idade
+        escreva("Digite sua idade: ")
+        leia(idade)
+        escreva("Sua idade é: ", idade)
+    }
+}
+</code></pre>
+
+    <h2>5. Operadores</h2>
+    <h3>5.1. Operadores Aritméticos</h3>
+    <ul>
+      <li><code>+</code>: Soma</li>
+      <li><code>-</code>: Subtração</li>
+      <li><code>*</code>: Multiplicação</li>
+      <li><code>/</code>: Divisão</li>
+      <li><code>div</code>: Divisão inteira (retorna a parte inteira)</li>
+      <li><code>mod</code>: Módulo (resto da divisão)</li>
+      <li><code>^</code>: Exponenciação (depende da ferramenta)</li>
+    </ul>
+    <pre><code>inteiro a = 10, b = 3
+escreva(a + b)  // Resultado: 13
+escreva(a div b) // Resultado: 3
+escreva(a mod b) // Resultado: 1
+</code></pre>
+    <h3>5.2. Operadores Relacionais</h3>
+    <ul>
+      <li><code>></code>: Maior que</li>
+      <li><code><</code>: Menor que</li>
+      <li><code>>=</code>: Maior ou igual</li>
+      <li><code><=</code>: Menor ou igual</li>
+      <li><code>=</code>: Igualdade</li>
+      <li><code><></code>: Diferente</li>
+    </ul>
+    <h3>5.3. Operadores Lógicos</h3>
+    <ul>
+      <li><code>e</code>: AND (e lógico)</li>
+      <li><code>ou</code>: OR (ou lógico)</li>
+      <li><code>nao</code>: NOT (negação)</li>
+    </ul>
+    <pre><code>logico resultado = (5 > 3) e (2 < 4) // Verdadeiro
+escreva(resultado)
+</code></pre>
+
+    <h2>6. Estruturas de Controle</h2>
+    <h3>6.1. Condicionais</h3>
+    <p>As estruturas condicionais permitem executar blocos de código com base em condições.</p>
+    <h4>Comando <code>se</code> e <code>senao</code></h4>
+    <pre><code>programa {
+    funcao inicio() {
+        inteiro idade
+        escreva("Digite sua idade: ")
+        leia(idade)
+        se (idade >= 18) {
+            escreva("Maior de idade")
+        } senao {
+            escreva("Menor de idade")
+        }
+    }
+}
+</code></pre>
+    <h4>Comando <code>escolha</code> (switch/case)</h4>
+    <pre><code>programa {
+    funcao inicio() {
+        inteiro dia
+        escreva("Digite um número de 1 a 7: ")
+        leia(dia)
+        escolha (dia) {
+            caso 1:
+                escreva("Domingo")
+                pare
+            caso 2:
+                escreva("Segunda")
+                pare
+            caso contrario:
+                escreva("Dia inválido")
+        }
+    }
+}
+</code></pre>
+    <h3>6.2. Laços de Repetição</h3>
+    <h4>Laço <code>enquanto</code> (while)</h4>
+    <p>Repete enquanto a condição for verdadeira.</p>
+    <pre><code>inteiro i = 1
+enquanto (i <= 5) {
+    escreva(i, " ")
+    i = i + 1
+}
+// Saída: 1 2 3 4 5
+</code></pre>
+    <h4>Laço <code>para</code> (for)</h4>
+    <p>Usa uma variável de controle para repetições.</p>
+    <pre><code>para (inteiro i = 1; i <= 5; i++) {
+    escreva(i, " ")
+}
+// Saída: 1 2 3 4 5
+</code></pre>
+    <h4>Laço <code>faca-enquanto</code> (do-while)</h4>
+    <p>Executa pelo menos uma vez e repete enquanto a condição for verdadeira.</p>
+    <pre><code>inteiro i = 1
+faca {
+    escreva(i, " ")
+    i = i + 1
+} enquanto (i <= 5)
+// Saída: 1 2 3 4 5
+</code></pre>
+
+    <h2>7. Vetores e Matrizes</h2>
+    <h3>7.1. Vetores</h3>
+    <p>Arrays unidimensionais para armazenar múltiplos valores.</p>
+    <pre><code>inteiro notas[5]
+notas[0] = 10
+notas[1] = 8
+escreva(notas[0]) // Saída: 10
+</code></pre>
+    <h3>7.2. Matrizes</h3>
+    <p>Arrays bidimensionais.</p>
+    <pre><code>inteiro matriz[2][2]
+matriz[0][0] = 1
+matriz[0][1] = 2
+matriz[1][0] = 3
+matriz[1][1] = 4
+escreva(matriz[0][0]) // Saída: 1
+</code></pre>
+    <h3>7.3. Percorrendo Vetores e Matrizes</h3>
+    <pre><code>para (inteiro i = 0; i < 2; i++) {
+    para (inteiro j = 0; j < 2; j++) {
+        escreva(matriz[i][j], " ")
+    }
+}
+// Saída: 1 2 3 4
+</code></pre>
+
+    <h2>8. Funções</h2>
+    <p>Funções permitem modularizar o código, tornando-o reutilizável.</p>
+    <h3>Exemplo com Retorno</h3>
+    <pre><code>funcao inteiro soma(inteiro a, inteiro b) {
+    retorne a + b
+}
+
+funcao inicio() {
+    inteiro resultado = soma(5, 3)
+    escreva("Soma: ", resultado) // Saída: 8
+}
+</code></pre>
+    <h3>Exemplo sem Retorno</h3>
+    <pre><code>funcao exibirMensagem(caractere msg[]) {
+    escreva(msg)
+}
+
+funcao inicio() {
+    exibirMensagem("Bem-vindo!") // Saída: Bem-vindo!
+}
+</code></pre>
+
+    <h2>9. Boas Práticas</h2>
+    <ol>
+      <li><strong>Use nomes descritivos</strong>: Prefira <code>idade</code> ou <code>salario</code> a <code>x</code> ou <code>y</code>.</li>
+      <li><strong>Comente o código</strong>: Explique trechos complexos para facilitar a leitura.</li>
+      <li><strong>Indentação</strong>: Mantenha o código organizado com recuos consistentes.</li>
+      <li><strong>Teste incrementalmente</strong>: Execute o programa em etapas para identificar erros.</li>
+      <li><strong>Evite redundância</strong>: Use funções para reutilizar lógica.</li>
+    </ol>
+
+    <h2>10. Exemplo Completo</h2>
+    <p>Programa que calcula a média de 3 notas e verifica se o aluno foi aprovado:</p>
+    <pre><code>programa {
+    funcao inicio() {
+        real notas[3], soma = 0.0, media
+        inteiro i
+        
+        // Leitura das notas
+        para (i = 0; i < 3; i++) {
+            escreva("Digite a nota ", i+1, ": ")
+            leia(notas[i])
+            soma = soma + notas[i]
+        }
+        
+        // Cálculo da média
+        media = soma / 3
+        
+        // Exibição do resultado
+        escreva("Média: ", media)
+        se (media >= 7) {
+            escreva("\nAprovado!")
+        } senao {
+            escreva("\nReprovado!")
+        }
+    }
+}
+</code></pre>
+
+    <h2>11. Ferramentas para Portugol</h2>
+    <ul>
+      <li><strong>VisuAlg</strong>: Interface simples, ideal para iniciantes. Disponível para download gratuito.</li>
+      <li><strong>Portugol Studio</strong>: Moderno, com destaque de sintaxe e depuração. Também gratuito.</li>
+      <li><strong>Editores de texto</strong>: Podem ser usados para escrever pseudocódigo, mas sem execução automática.</li>
+    </ul>
+
+    <h2>12. Diferenças Regionais e Ferramentas</h2>
+    <p>A sintaxe do Portugol pode variar entre ferramentas:</p>
+    <ul>
+      <li><strong>VisuAlg</strong>: Usa <code>escreva</code>, <code>leia</code>, <code>se</code>, <code>senao</code>.</li>
+      <li><strong>Portugol Studio</strong>: Pode usar <code>escreval</code> (escreve e pula linha) ou sintaxes próximas de C.</li>
+    </ul>
+    <p>Consulte a documentação da ferramenta para confirmar a sintaxe.</p>
+
+    <h2>13. Limitações do Portugol</h2>
+    <ul>
+      <li><strong>Não compilado</strong>: Não gera executáveis para uso em produção.</li>
+      <li><strong>Focado em ensino</strong>: Não suporta recursos avançados como manipulação de arquivos ou redes.</li>
+      <li><strong>Variações de sintaxe</strong>: Podem causar confusão ao mudar de ferramenta.</li>
+    </ul>
+
+    <h2>14. Transição para Outras Linguagens</h2>
+    <p>Portugol prepara o aluno para linguagens como:</p>
+    <ul>
+      <li><strong>C</strong>: Estruturas como <code>for</code>, <code>while</code> e <code>if</code> são semelhantes.</li>
+      <li><strong>Python</strong>: Simplicidade na sintaxe, mas com mais recursos.</li>
+      <li><strong>Java</strong>: Mais robusto, com conceitos de orientação a objetos.</li>
+    </ul>
+    <h3>Exemplo de Equivalência</h3>
+    <pre><code>// Portugol
+escreva("Olá")
+</code></pre>
+    <pre><code>// C
+printf("Olá\n");
+</code></pre>
+
+    <h2>15. Recursos Adicionais</h2>
+    <ul>
+      <li><strong>Documentação do VisuAlg</strong>: Disponível no site oficial.</li>
+      <li><strong>Tutoriais no YouTube</strong>: Canais como "Programação Descomplicada" oferecem aulas práticas.</li>
+      <li><strong>Comunidades</strong>: Fóruns como o do Portugol Studio ou grupos no X (@portugolstudio).</li>
+    </ul>
+
+    <h2>16. Conclusão</h2>
+    <p>Portugol é uma ferramenta poderosa para aprender lógica de programação de forma acessível. Com uma sintaxe clara e comandos em português, ele ajuda iniciantes a dominarem conceitos fundamentais como variáveis, estruturas de controle e funções. Este guia cobre tudo o que você precisa para começar, desde a estrutura básica até exemplos práticos. Para dominar Portugol, pratique escrevendo algoritmos, experimente ferramentas como VisuAlg ou Portugol Studio e prepare-se para dar o próximo passo em linguagens como C ou Python!</p>
+  </div>
+</body>
+
+</html>

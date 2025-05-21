@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia sobre Lógica de Programação e Algoritmos</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333333;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 60px 20px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #000000;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      font-weight: 400;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      font-weight: 400;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #000000;
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    strong {
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-left: 4px solid #cccccc;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+      color: #333333;
+      margin-bottom: 30px;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      color: #333333;
+    }
+
+    ul,
+    ol {
+      margin-bottom: 30px;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 1em;
+      font-weight: 300;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <h1>Guia sobre Lógica de Programação e Algoritmos</h1>
+    <p>A lógica de programação é a habilidade de organizar o raciocínio de forma estruturada para criar soluções eficientes para problemas usando computadores. Ela envolve o uso de processos lógicos, como análise, tomada de decisão e sequenciamento, para transformar ideias em instruções que uma máquina pode entender e executar. É a base de qualquer linguagem de programação, permitindo que você "ensine" o computador a realizar tarefas de maneira clara e objetiva.</p>
+    <p>Para representar essa lógica, usamos <strong>algoritmos</strong>, que são sequências de passos bem definidas para alcançar um objetivo específico. Pense na lógica de programação como o ato de planejar uma receita: você define os ingredientes, a ordem das ações e as condições para que o prato saia como esperado.</p>
+
+    <h2>1. O que são Algoritmos?</h2>
+    <p>Um algoritmo é uma sequência finita de passos, descrita de forma clara e precisa, que visa resolver um problema ou atingir um objetivo. Ele é a representação prática da lógica de programação, traduzindo o raciocínio em instruções organizadas. Cada passo deve ser simples, compreensível e executável, levando ao resultado desejado.</p>
+    <p>Por exemplo, um algoritmo é como um manual de instruções: seja para cozinhar, montar um móvel ou programar um aplicativo, ele guia o processo de forma lógica e eficiente.</p>
+
+    <h2>2. Exemplo de Algoritmo: Trocar uma Lâmpada</h2>
+    <p><strong>Objetivo</strong>: Substituir uma lâmpada queimada por uma nova.</p>
+    <h3>Algoritmo Básico</h3>
+    <ol>
+      <li>Pegar uma escada.</li>
+      <li>Posicionar a escada embaixo da lâmpada.</li>
+      <li>Buscar uma lâmpada nova.</li>
+      <li>Subir na escada.</li>
+      <li>Retirar a lâmpada velha.</li>
+      <li>Colocar a lâmpada nova.</li>
+    </ol>
+    <p>Este é um exemplo simples de algoritmo, mas ele pode ser adaptado de várias formas, dependendo de como a pessoa pensa ou das condições do problema.</p>
+
+    <h2>3. O Algoritmo Pode Mudar?</h2>
+    <p>Sim! Um mesmo problema pode ser resolvido de maneiras diferentes, pois cada pessoa organiza seu raciocínio de forma única. A essência do algoritmo está em atingir o objetivo, mas a ordem ou os passos podem variar. Por exemplo, alguém pode decidir verificar a lâmpada antes de pegar a escada, enquanto outra pessoa pode priorizar preparar todos os materiais primeiro.</p>
+
+    <h2>4. E se a Lâmpada Não Estiver Queimada?</h2>
+    <p>Nem sempre sabemos se a lâmpada está realmente queimada. Podemos melhorar o algoritmo incluindo uma verificação inicial para evitar trabalho desnecessário.</p>
+    <h3>Algoritmo com Verificação</h3>
+    <ol>
+      <li>Acionar o interruptor.</li>
+      <li>Se a lâmpada acender, parar.</li>
+      <li>Se a lâmpada não acender, então:
+        <ul>
+          <li>Pegar uma escada.</li>
+          <li>Posicionar a escada embaixo da lâmpada.</li>
+          <li>Subir na escada.</li>
+          <li>Retirar a lâmpada velha.</li>
+          <li>Colocar a lâmpada nova.</li>
+        </ul>
+      </li>
+    </ol>
+    <p>Essa versão introduz uma <strong>condição</strong> (se/então), que é um conceito fundamental na lógica de programação. Ela garante que só trocaremos a lâmpada se necessário.</p>
+
+    <h2>5. E se a Lâmpada Nova Não Funcionar?</h2>
+    <p>Às vezes, a lâmpada nova também pode estar com defeito. Para lidar com isso, podemos adicionar uma repetição para tentar outras lâmpadas até que uma funcione.</p>
+    <h3>Algoritmo com Repetição</h3>
+    <ol>
+      <li>Acionar o interruptor.</li>
+      <li>Se a lâmpada acender, parar.</li>
+      <li>Se a lâmpada não acender, então:
+        <ul>
+          <li>Pegar uma escada.</li>
+          <li>Posicionar a escada embaixo da lâmpada.</li>
+          <li>Subir na escada.</li>
+          <li>Retirar a lâmpada velha.</li>
+          <li>Colocar uma lâmpada nova.</li>
+          <li>Enquanto a lâmpada nova não acender, faça:
+            <ul>
+              <li>Retirar a lâmpada atual.</li>
+              <li>Colocar outra lâmpada nova.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <p>Aqui, usamos um <strong>laço de repetição</strong> ("enquanto"), outro conceito essencial em programação, que permite repetir ações até que uma condição seja satisfeita.</p>
+
+    <h2>6. Por que Melhorar Algoritmos?</h2>
+    <p>Melhorar um algoritmo significa torná-lo mais eficiente, claro e adaptável. No exemplo acima, verificamos a lâmpada antes de trocar e incluímos um mecanismo para lidar com lâmpadas defeituosas. Esses ajustes:</p>
+    <ul>
+      <li>Reduzem passos desnecessários.</li>
+      <li>Lidam com situações imprevistas.</li>
+      <li>Tornam o processo mais robusto.</li>
+    </ul>
+    <p>Na programação, algoritmos bem planejados economizam tempo, recursos computacionais e facilitam a manutenção do código.</p>
+
+    <h2>7. Exemplo em Portugol</h2>
+    <p>Para ilustrar como a lógica de programação e algoritmos se aplicam em código, aqui está o algoritmo de troca de lâmpada representado em Portugol, usando uma abordagem simplificada:</p>
+    <pre><code>programa {
+    funcao inicio() {
+        logico lampadaAcende = falso
+        inteiro tentativas = 0
+        const inteiro MAX_TENTATIVAS = 3
+        
+        escreva("Acionando o interruptor...\n")
+        lampadaAcende = falso // Simula que a lâmpada não acende
+        
+        se (lampadaAcende) {
+            escreva("A lâmpada está funcionando. Nenhuma ação necessária.")
+        } senao {
+            escreva("A lâmpada não acende. Iniciando troca...\n")
+            enquanto (nao lampadaAcende e tentativas < MAX_TENTATIVAS) {
+                escreva("Pegar escada\n")
+                escreva("Posicionar escada\n")
+                escreva("Subir na escada\n")
+                escreva("Retirar lâmpada velha\n")
+                escreva("Colocar lâmpada nova\n")
+                tentativas = tentativas + 1
+                lampadaAcende = falso // Simula tentativa com lâmpada nova
+                se (lampadaAcende) {
+                    escreva("Lâmpada nova funciona!\n")
+                } senao {
+                    escreva("Lâmpada nova não funciona. Tentando novamente...\n")
+                }
+            }
+            se (nao lampadaAcende) {
+                escreva("Nenhuma lâmpada nova funcionou após ", MAX_TENTATIVAS, " tentativas.\n")
+            }
+        }
+    }
+}
+</code></pre>
+    <p>Este código simula o processo de troca de lâmpada, com verificações condicionais e repetições, demonstrando como a lógica de programação é aplicada na prática.</p>
+
+    <h2>8. Conclusão</h2>
+    <p>A lógica de programação é a arte de estruturar o pensamento para resolver problemas de forma sistemática, usando algoritmos como ferramentas para descrever esses passos. Ao criar algoritmos, você aprende a dividir problemas complexos em partes menores, prever cenários e otimizar soluções. Com prática, esses conceitos se tornam naturais, preparando você para programar em qualquer linguagem, como Portugol, C ou Python. Comece com exemplos simples, como o de trocar uma lâmpada, e evolua para algoritmos mais complexos à medida que ganha confiança!</p>
+  </div>
+</body>
+
+</html>
