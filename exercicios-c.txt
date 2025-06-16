@@ -1,0 +1,61 @@
+1. Descrição: Escreva um programa que leia uma nota (de 0 a 10) e converta em um conceito, conforme a tabela:
+
+9.0 a 10.0: A
+7.0 a 8.9: B
+5.0 a 6.9: C
+3.0 a 4.9: D
+0.0 a 2.9: E
+
+Se a nota for inválida (menor que 0 ou maior que 10), exiba "Nota inválida".
+
+Após verifique se o aluno estaria aprovado, de recuperação ou reprovado com base na tabela abaixo
+
+A, B: Aprovado
+C: De recuperação
+D, E: Reprovado
+
+Exiba as informações para o usuário.
+
+---------------------------------------------------------------
+
+2. Escreva um programa que leia o valor de uma compra (real) e o tipo de cliente (1 = Regular, 2 = VIP, 3 = Funcionário). Aplique descontos:
+
+Regular: 0% de desconto
+VIP: 10% de desconto
+Funcionário: 20% de desconto
+
+Você deve validar o valor da compra, valor mínimo de compra R$1
+
+Exiba as informações para o usuário.
+
+------------------------------------------------------------------------
+
+3. Escreva um programa que leia o peso (em kg, real) e a altura (em metros, real) de uma pessoa e calcule o Índice de Massa Corporal (IMC = peso / altura²). Classifique o IMC conforme:
+
+Abaixo de 18.5: "Abaixo do peso"
+18.5 a 24.9: "Peso normal"
+25.0 a 29.9: "Sobrepeso"
+30.0 ou mais: "Obesidade"
+
+Se o peso ou altura for menor ou igual a 0, exiba "Entrada inválida".
+
+Exiba as informações para o usuário.
+
+--------------------------------------------------------------
+
+4. Escreva um programa que leia o consumo de energia em kWh (real) e o tipo de instalação (1 = Residencial, 2 = Comercial, 3 = Industrial). Calcule o valor da conta com base nas tarifas:
+
+Residencial: R$ 0.60 por kWh
+Comercial: R$ 0.75 por kWh
+Industrial: R$ 0.90 por kWh
+
+Exiba as informações para o usuário.
+
+
+
+
+
+
+
+
+

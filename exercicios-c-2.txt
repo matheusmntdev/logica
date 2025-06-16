@@ -1,0 +1,37 @@
+Escreva um programa que leia um número inteiro positivo (n) e use um laço for para contar quantos números pares existem de 1 até (n). Use if para verificar se cada número é par e exiba o total de números pares. Se (n) for menor ou igual a 0, exiba "Número inválido".
+
+------------------------------------------------------------
+
+Escreva um programa que exiba um menu com 4 opções: 
+1: Somar dois números
+
+2: Subtrair dois números
+
+3: Multiplicar dois números
+
+4: Sair
+Use um laço do-while para manter o menu ativo até que o usuário escolha a opção 4. Para as opções 1, 2 e 3, leia dois números reais e use switch para realizar a operação escolhida. Exiba o resultado. Se a opção for inválida, exiba "Opção inválida".
+
+--------------------------------------------------------------------
+
+Escreva um programa que simule saques em um caixa eletrônico. Leia o valor do saque (inteiro, em reais) e use um laço while para calcular a quantidade de notas de 100, 50, 20, 10, 5 e 2 reais necessárias, entregando o menor número de notas possível. Use if-else para verificar cada tipo de nota. O programa deve continuar pedindo valores de saque até que o usuário digite 0. Se o valor for negativo ou não divisível por 2, exiba "Valor inválido".
+
+Exemplo de entrada e saída:
+	Entrada: 180
+
+	Saída: 1 nota(s) de 100, 1 nota(s) de 50, 1 nota(s) de 20, 1 nota(s) de 10
+
+	Entrada: 15
+
+	Saída: Valor inválido
+
+	Entrada: 0
+
+	Saída: (programa encerra)
+
+Dica: Use while para continuar pedindo saques e outro while com if-else para calcular as notas.
+
+
+
+
+
