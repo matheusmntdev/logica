@@ -1,0 +1,38 @@
+1. Soma de elementos de um vetor
+Descrição: Crie um programa que declare um vetor de 5 números inteiros, solicite os valores ao usuário e calcule a soma de todos os elementos.
+Exemplo: Se o vetor for [2, 4, 6, 8, 10], a soma será 30.
+Objetivo: Praticar declaração de vetores, entrada de dados e iteração.
+Dica: Use um laço for para somar os elementos.
+
+2. Encontrar o maior elemento de um vetor
+Descrição: Escreva um programa que declare um vetor de 6 números reais, receba valores do usuário e exiba o maior valor encontrado.
+Exemplo: Se o vetor for [3.5, 7.2, 1.0, 9.8, 4.3, 6.1], o maior será 9.8.
+Objetivo: Trabalhar com comparação e controle de variáveis.
+Dica: Inicialize uma variável maior com o primeiro elemento e compare com os demais.
+
+3. Substituir valores negativos por zero
+Descrição: Crie um programa que declare um vetor de 6 números inteiros, receba os valores do usuário e substitua todos os valores negativos por zero. Exiba o vetor modificado.
+Exemplo: Se o vetor for [3, -5, 7, -2, 0, -1], a saída será [3, 0, 7, 0, 0, 0].
+Objetivo: Praticar manipulação direta de elementos no vetor.
+Dica: Use um laço para verificar cada elemento e altere os negativos com uma condicional.
+
+4. Calcular a média dos elementos
+Descrição: Escreva um programa que declare um vetor de 5 números reais, receba os valores do usuário e calcule a média dos elementos.
+Exemplo: Se o vetor for [2.5, 3.0, 4.5, 5.0, 5.0], a média será 4.0.
+Objetivo: Reforçar soma de elementos e manipulação de dados reais.
+Dica: Some os elementos em uma variável e divida pelo tamanho do vetor.
+
+5. Verificar se um número está no vetor
+Descrição: Crie um programa que declare um vetor de 5 números inteiros, solicite os valores ao usuário e, em seguida, peça um número para verificar se ele está no vetor. Exiba uma mensagem indicando se o número foi encontrado ou não.
+Exemplo: Se o vetor for [3, 7, 1, 9, 4] e o número buscado for 7, a saída será "Número 7 encontrado!". Caso seja 5, "Número 5 não encontrado.".
+Objetivo: Praticar busca linear em vetores.
+Dica: Use um laço for para comparar cada elemento com o número buscado.
+
+6. Contar elementos maiores que um valor
+Descrição: Escreva um programa que declare um vetor de 6 números reais, receba os valores do usuário e peça um valor de referência. Conte quantos elementos do vetor são maiores que esse valor.
+Exemplo: Se o vetor for [2.3, 5.1, 3.2, 7.8, 4.0, 1.5] e o valor de referência for 3.0, a saída será 3 (pois 5.1, 7.8 e 4.0 são maiores).
+Objetivo: Reforçar comparação e contagem em vetores.
+Dica: Use uma variável para contar e incremente-a quando encontrar um elemento maior.
+
+
+

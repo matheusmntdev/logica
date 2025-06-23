@@ -1,0 +1,20 @@
+1. Soma dos elementos de uma matriz
+Descrição: Crie um programa que declare uma matriz 3x3 de números inteiros, solicite os valores ao usuário e calcule a soma de todos os elementos.
+Exemplo: Para a matriz [[1, 2, 3], [4, 5, 6], [7, 8, 9]], a soma será 45.
+Objetivo: Praticar declaração de matrizes, entrada de dados e iteração com laços aninhados.
+Dica: Use dois laços for (um para linhas, outro para colunas) para somar os elementos.
+
+2. Exibir a diagonal principal
+Descrição: Escreva um programa que declare uma matriz 3x3 de números reais, receba os valores do usuário e exiba os elementos da diagonal principal (posições onde linha = coluna).
+Exemplo: Para a matriz [[2.0, 3.1, 4.2], [5.3, 6.4, 7.5], [8.6, 9.7, 1.8]], a diagonal principal é [2.0, 6.4, 1.8].
+Objetivo: Entender acesso a índices específicos em matrizes.
+Dica: Use um laço onde o índice da linha é igual ao da coluna (matriz[i][i]).
+
+3. Contar elementos negativos
+Descrição: Crie um programa que declare uma matriz 2x4 de números inteiros, solicite os valores ao usuário e conte quantos elementos são negativos.
+Exemplo: Para a matriz [[1, -2, 3, -4], [5, -6, 7, 8]], a saída será 3 (pois -2, -4 e -6 são negativos).
+Objetivo: Praticar verificação condicional e iteração em matrizes.
+Dica: Use laços aninhados para percorrer a matriz e incremente um contador quando encontrar um valor negativo.
+
+
+
