@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções em Arquivos Separados em C</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Funções em Arquivos Separados em C</h1>
+    <p>Organizar funções em arquivos separados em C é uma prática essencial para criar programas modulares e fáceis de manter. Este guia explica passo a passo como fazer isso, com exemplos completos e dicas para iniciantes. Vamos criar um projeto simples, compilar e executar, tudo de forma clara e sem interrupções.</p>
+
+    <h2>Por que Separar Funções em Arquivos?</h2>
+    <p>Separar funções em arquivos diferentes:</p>
+    <ul>
+        <li>Torna o código mais organizado.</li>
+        <li>Facilita a reutilização de funções em outros projetos.</li>
+        <li>Permite trabalhar em equipe, com cada pessoa editando partes específicas.</li>
+    </ul>
+    <p>Em C, usamos:</p>
+    <ul>
+        <li><strong>Arquivos de cabeçalho</strong> (<code>.h</code>): Para declarar os protótipos das funções.</li>
+        <li><strong>Arquivos de implementação</strong> (<code>.c</code>): Para definir o código das funções.</li>
+        <li><strong>Arquivo principal</strong> (<code>main.c</code>): Para usar as funções.</li>
+    </ul>
+
+    <h2>Estrutura do Projeto</h2>
+    <p>Um projeto típico com funções separadas tem esta organização:</p>
+    <pre><code>meu_projeto/
+├── funcoes.h    // Declarações das funções
+├── funcoes.c    // Implementações das funções
+├── main.c       // Programa principal</code></pre>
+    <p>Vamos criar cada arquivo com exemplos práticos.</p>
+
+    <h2>1. Arquivo de Cabeçalho (<code>funcoes.h</code>)</h2>
+    <p>O arquivo <code>.h</code> contém os <strong>protótipos</strong> das funções (assinaturas) e usa <strong>include guards</strong> para evitar múltiplas inclusões.</p>
+    <p><strong>Conteúdo de <code>funcoes.h</code>:</strong></p>
+    <pre><code>#ifndef FUNCOES_H
+#define FUNCOES_H
+
+// Protótipos das funções
+int somar(int a, int b);
+int ehPar(int num);
+void imprimirMensagem();
+
+#endif</code></pre>
+    <p>- <code>#ifndef</code>, <code>#define</code>, <code>#endif</code>: Garantem que o arquivo não seja incluído mais de uma vez, evitando erros.</p>
+
+    <h2>2. Arquivo de Implementação (<code>funcoes.c</code>)</h2>
+    <p>O arquivo <code>.c</code> contém o código das funções declaradas no <code>.h</code>. Ele inclui o arquivo de cabeçalho para garantir consistência.</p>
+    <p><strong>Conteúdo de <code>funcoes.c</code>:</strong></p>
+    <pre><code>#include "funcoes.h"
+#include &lt;stdio.h&gt;
+
+int somar(int a, int b) {
+    return a + b;
+}
+
+int ehPar(int num) {
+    return (num % 2 == 0) ? 1 : 0;
+}
+
+void imprimirMensagem() {
+    printf("Olá, este é um exemplo!\n");
+}</code></pre>
+    <p>- <code>#include "funcoes.h"</code>: Inclui o arquivo local com as declarações.</p>
+
+    <h2>3. Arquivo Principal (<code>main.c</code>)</h2>
+    <p>O arquivo <code>main.c</code> usa as funções definidas em <code>funcoes.c</code>, incluindo o arquivo <code>.h</code> para acessar os protótipos.</p>
+    <p><strong>Conteúdo de <code>main.c</code>:</strong></p>
+    <pre><code>#include &lt;stdio.h&gt;
+#include "funcoes.h"
+
+int main() {
+    int a = 5, b = 3;
+    printf("Soma de %d e %d: %d\n", a, b, somar(a, b));
+
+    int num = 8;
+    if (ehPar(num)) {
+        printf("%d é par\n", num);
+    } else {
+        printf("%d é ímpar\n", num);
+    }
+
+    imprimirMensagem();
+
+    return 0;
+}</code></pre>
+
+    <h2>4. Compilar e Executar</h2>
+    <p>Para compilar um programa com múltiplos arquivos, use o comando abaixo no terminal (com <code>gcc</code>, por exemplo):</p>
+    <p><strong>Compilar:</strong></p>
+    <pre><code>gcc -o programa main.c funcoes.c</code></pre>
+    <p>- <code>-o programa</code>: Nome do executável.</p>
+    <p>- <code>main.c funcoes.c</code>: Lista todos os arquivos <code>.c</code> a serem compilados.</p>
+    <p><strong>Executar:</strong></p>
+    <pre><code>./programa</code></pre>
+    <p><strong>Saída esperada:</strong></p>
+    <pre><code>Soma de 5 e 3: 8
+8 é par
+Olá, este é um exemplo!</code></pre>
+
+    <h2>Detalhes Importantes</h2>
+    <ul>
+        <li><strong>Diferença entre <code>#include &lt; &gt;</code> e <code>#include " "</code></strong>:
+            <ul>
+                <li><code>&lt;stdio.h&gt;</code>: Biblioteca padrão.</li>
+                <li><code>"funcoes.h"</code>: Arquivo local no mesmo diretório.</li>
+            </ul>
+        </li>
+        <li><strong>Include Guards</strong>: Evitam erros como "redefinition" se o <code>.h</code> for incluído várias vezes.</li>
+        <li><strong>Modularidade</strong>: Cada arquivo <code>.c</code> pode ter sua própria lógica, e o <code>.h</code> serve como uma "interface".</li>
+    </ul>
+
+    <h2>Exemplo Adicional</h2>
+    <p>Vamos criar um exemplo com uma função que calcula o fatorial de um número.</p>
+    <p><strong><code>fatorial.h</code>:</strong></p>
+    <pre><code>#ifndef FATORIAL_H
+#define FATORIAL_H
+
+int fatorial(int n);
+
+#endif</code></pre>
+    <p><strong><code>fatorial.c</code>:</strong></p>
+    <pre><code>#include "fatorial.h"
+
+int fatorial(int n) {
+    if (n <= 1) return 1;
+    return n * fatorial(n - 1);
+}</code></pre>
+    <p><strong><code>main.c</code>:</strong></p>
+    <pre><code>#include &lt;stdio.h&gt;
+#include "fatorial.h"
+
+int main() {
+    int num = 5;
+    printf("Fatorial de %d é %d\n", num, fatorial(num));
+    return 0;
+}</code></pre>
+    <p><strong>Compilar e executar:</strong></p>
+    <pre><code>gcc -o fatorial main.c fatorial.c
+./fatorial</code></pre>
+    <p><strong>Saída:</strong></p>
+    <pre><code>Fatorial de 5 é 120</code></pre>
+
+    <h2>Dicas para Iniciantes</h2>
+    <ol>
+        <li><strong>Mantenha os arquivos no mesmo diretório</strong>: Simplifica a compilação.</li>
+        <li><strong>Use nomes claros</strong>: Ex.: <code>matematica.h</code>, <code>utilidades.c</code>.</li>
+        <li><strong>Teste cada função</strong>: Compile e verifique erros após adicionar cada parte.</li>
+        <li><strong>Evite código no <code>.h</code></strong>: Coloque apenas protótipos, nunca implementações.</li>
+    </ol>
+
+    <h2>Resolução de Problemas Comuns</h2>
+    <ul>
+        <li><strong>"undefined reference to..."</strong>: Você esqueceu de incluir um arquivo <code>.c</code> na compilação (ex.: <code>gcc -o programa main.c</code> em vez de <code>gcc -o programa main.c funcoes.c</code>).</li>
+        <li><strong>"cannot find funcoes.h"</strong>: Verifique se o arquivo <code>.h</code> está no mesmo diretório ou ajuste o caminho no <code>#include</code>.</li>
+        <li><strong>Erros de redefinição</strong>: Confirme que usou <strong>include guards</strong> no <code>.h</code>.</li>
+    </ul>
+</body>
+</html>
