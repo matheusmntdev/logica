@@ -1,0 +1,49 @@
+1. Calcular o quadrado de um número
+
+Descrição: Crie uma função que receba um número inteiro e retorne o seu quadrado. No programa principal, leia um número do usuário e exiba o resultado usando a função.
+
+2. Calcular a média de três números
+
+Descrição: Crie uma função que receba três números reais e retorne a média aritmética deles. No programa principal, leia três números e exiba a média.
+
+3. Converter temperatura de Celsius para Fahrenheit
+
+Descrição: Escreva uma função que converta uma temperatura de Celsius para Fahrenheit usando a fórmula: F = (C * 9/5) + 32. No programa principal, leia uma temperatura e exiba o resultado.
+
+4.  Calcular o maior de dois números
+
+Descrição: Crie uma função que receba dois números inteiros e retorne o maior deles. No programa principal, leia dois números e exiba o maior.
+
+5. Calcular potência
+
+Escreva uma função que receba uma base e um expoente (inteiros) e retorne o valor da base elevada ao expoente, sem usar a função pow. No programa principal, leia a base e o expoente e exiba o resultado.
+
+6. Contar dígitos de um número
+
+Descrição: Crie uma função que receba um número inteiro positivo e retorne a quantidade de dígitos que ele possui, usando um laço de repetição. Use uma estrutura de decisão para verificar se o número é positivo. No programa principal, leia um número e exiba o resultado.
+
+7. Calcular a soma dos números pares em um intervalo
+
+Descrição: Crie uma função que receba dois números inteiros (início e fim) e retorne a soma de todos os números pares no intervalo [início, fim]. Use repetição para percorrer o intervalo e decisão para verificar números pares. No programa principal, leia os limites e exiba o resultado.
+
+8. Contar números divisíveis por 3 em um intervalo
+
+Descrição: Escreva uma função que receba dois números inteiros (início e fim) e retorne a quantidade de números divisíveis por 3 no intervalo [início, fim]. Use repetição para percorrer o intervalo e decisão para verificar divisibilidade. No programa principal, leia os limites e exiba o resultado.
+
+9. Verificar se um número é divisível por outro
+
+Descrição: Crie uma função que receba dois números inteiros positivos e retorne 1 se o primeiro número for divisível pelo segundo, ou 0 caso contrário. Use decisão para verificar divisibilidade e repetição para validar entradas iterativamente, se necessário. No programa principal, leia dois números e exiba o resultado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
